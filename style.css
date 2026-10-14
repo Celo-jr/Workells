@@ -1,0 +1,172 @@
+:root {
+  --preto: #000000;
+  --amarelo: #eeb600;
+  --amarelo-escuro: #c99a00;
+  --amarelo-claro: #fff5cf;
+  --laranja: #ff7417;
+  --laranja-claro: #ffeadb;
+  --marrom: #964000;
+  --marrom-escuro: #6e2e00;
+  --branco: #fffafa;
+  --cinza-borda: #eadfd6;
+  --texto: #3a2d25;
+
+  /* Variáveis do Bootstrap */
+  --bs-primary: #ff7417;
+  --bs-primary-rgb: 255, 116, 23;
+  --bs-link-color: #964000;
+  --bs-link-hover-color: #6e2e00;
+  --bs-body-bg: #fffafa;
+  --bs-body-color: #3a2d25;
+  --bs-body-font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+body { background: var(--branco); }
+main { padding-top: 70px; }
+h1, h2, h3, h4, h5 { color: var(--preto); font-weight: 700; letter-spacing: -0.01em; }
+
+/* Botões: amarelo com texto preto (melhor contraste) */
+.btn-primary {
+  --bs-btn-bg: #eeb600;
+  --bs-btn-border-color: #eeb600;
+  --bs-btn-color: #000;
+  --bs-btn-hover-bg: #c99a00;
+  --bs-btn-hover-border-color: #c99a00;
+  --bs-btn-hover-color: #000;
+  --bs-btn-active-bg: #b08700;
+  --bs-btn-active-border-color: #b08700;
+  --bs-btn-active-color: #000;
+  --bs-btn-disabled-bg: #eeb600;
+  --bs-btn-disabled-border-color: #eeb600;
+  --bs-btn-focus-shadow-rgb: 238, 182, 0;
+  font-weight: 700;
+}
+.btn-outline-primary {
+  --bs-btn-color: #964000;
+  --bs-btn-border-color: #964000;
+  --bs-btn-hover-bg: #964000;
+  --bs-btn-hover-border-color: #964000;
+  --bs-btn-hover-color: #fffafa;
+  --bs-btn-active-bg: #6e2e00;
+  --bs-btn-active-border-color: #6e2e00;
+  --bs-btn-active-color: #fffafa;
+  --bs-btn-focus-shadow-rgb: 150, 64, 0;
+  font-weight: 600;
+}
+.form-control, .form-select { border-color: var(--cinza-borda); background-color: #fff; }
+.form-control:focus, .form-select:focus, .form-check-input:focus {
+  border-color: var(--laranja);
+  box-shadow: 0 0 0 .25rem rgba(255, 116, 23, .2);
+}
+.form-check-input:checked { background-color: var(--laranja); border-color: var(--laranja); }
+.accordion-item { border-color: var(--cinza-borda); }
+.accordion-button:not(.collapsed) { background: var(--amarelo-claro); color: var(--preto); box-shadow: none; }
+.accordion-button:focus { box-shadow: 0 0 0 .25rem rgba(255, 116, 23, .2); }
+.spinner-border.text-primary { color: var(--amarelo) !important; }
+
+/* Header preto com destaque amarelo */
+.navbar-laranja {
+  background-color: var(--preto);
+  border-bottom: 3px solid var(--amarelo);
+}
+.navbar-laranja .navbar-brand { font-size: 1.4rem; letter-spacing: -0.02em; color: #fff; }
+.navbar-laranja .navbar-brand i { color: var(--amarelo); }
+.navbar-laranja .nav-link { color: #fff; font-weight: 500; padding: .5rem 1rem; }
+.navbar-laranja .nav-link:hover,
+.navbar-laranja .nav-link.active {
+  color: var(--amarelo);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+/* Hero */
+.hero {
+  background:
+    radial-gradient(circle at 90% 15%, rgba(238, 182, 0, .35), transparent 40%),
+    radial-gradient(circle at 5% 100%, rgba(255, 116, 23, .30), transparent 45%),
+    #000;
+  color: #fff;
+  padding: 5rem 0 6rem;
+}
+.hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.12; max-width: 16ch; }
+.hero p.lead { color: #e7ddd3; max-width: 52ch; }
+.busca-card {
+  background: var(--branco); border-radius: 1rem; padding: 1rem;
+  border: 2px solid var(--amarelo);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
+}
+.busca-card .form-control, .busca-card .form-select { border: 0; background: #f3ebe4; min-height: 3rem; }
+
+.page-header {
+  background: radial-gradient(circle at 90% 0%, rgba(238, 182, 0, .25), transparent 45%), #000;
+  color: #fff; padding: 3.5rem 0;
+  border-bottom: 4px solid var(--laranja);
+}
+.page-header h1 { color: #fff; }
+.page-header p { color: #e7ddd3; margin-bottom: 0; max-width: 60ch; }
+
+section.bloco { padding: 4rem 0; }
+.bloco-branco { background: #fff; }
+
+/* Cards de vaga */
+.vaga-card {
+  border: 1px solid var(--cinza-borda); border-radius: 1rem; background: #fff; height: 100%;
+  transition: border-color .2s, box-shadow .2s;
+}
+.vaga-card:hover { border-color: var(--amarelo); box-shadow: 0 10px 28px rgba(0, 0, 0, .12); }
+.vaga-logo {
+  width: 52px; height: 52px; border-radius: .75rem; object-fit: contain; background: var(--branco);
+  border: 1px solid var(--cinza-borda); padding: 4px; flex: none;
+}
+.vaga-logo-vazio {
+  width: 52px; height: 52px; border-radius: .75rem; background: var(--preto);
+  color: var(--amarelo); display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1.25rem; flex: none;
+}
+.vaga-card .titulo { font-size: 1.05rem; line-height: 1.3; }
+.badge-tag { background: var(--amarelo-claro); color: var(--marrom-escuro); font-weight: 600; }
+.badge-neutra { background: var(--branco); color: var(--texto); font-weight: 500; border: 1px solid var(--cinza-borda); }
+
+/* Cards de serviço / valores */
+.card-info {
+  border: 1px solid var(--cinza-borda); border-radius: 1rem; background: #fff; padding: 1.75rem; height: 100%;
+}
+.icone-circulo {
+  width: 52px; height: 52px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--preto); color: var(--amarelo); font-size: 1.4rem; margin-bottom: 1rem;
+}
+
+/* Passos */
+.passo-num {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--amarelo); color: #000;
+  display: inline-flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 1rem;
+}
+
+/* Faixa de chamada (marrom) */
+.faixa-cta { background: var(--marrom); color: var(--branco); padding: 3.5rem 0; }
+.faixa-cta h2 { color: #fff; }
+.faixa-cta .btn-light { background: var(--amarelo); border-color: var(--amarelo); color: #000; font-weight: 700; }
+.faixa-cta .btn-light:hover { background: #fff; border-color: #fff; color: #000; }
+
+/* Formulários */
+.form-card {
+  background: #fff; border: 1px solid var(--cinza-borda); border-radius: 1rem; padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+}
+.form-label { font-weight: 600; color: var(--preto); font-size: .92rem; }
+.form-card h2 { font-size: 1.15rem; padding-bottom: .5rem; border-bottom: 3px solid var(--amarelo); margin-bottom: 1.25rem; display: inline-block; }
+.status-cep { font-size: .85rem; min-height: 1.2rem; }
+
+/* Rodapé */
+footer.rodape { background: var(--preto); color: #cfc3b8; padding: 3.5rem 0 1.5rem; border-top: 4px solid var(--amarelo); }
+footer.rodape h5 { color: #fff; font-size: 1rem; }
+footer.rodape a { color: #cfc3b8; text-decoration: none; }
+footer.rodape a:hover { color: var(--amarelo); }
+footer.rodape .marca { color: #fff; font-weight: 800; font-size: 1.5rem; }
+footer.rodape .marca span { color: var(--amarelo); }
+footer.rodape hr { border-color: #3a3028; }
+footer.rodape i { color: var(--laranja); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width: 575.98px) { .hero { padding: 3rem 0 4rem; } }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Workells: encontre vagas de emprego, cadastre seu currículo e dê o próximo passo na carreira.">
+  <title>Serviços - Workells</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-laranja fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-briefcase-fill me-2"></i>Workells</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link " href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link active" href="servicos.html">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link " href="cadastro.html">Cadastro</a></li>
+            <li class="nav-item"><a class="nav-link " href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="mb-2">Nossos serviços</h1>
+        <p>Ferramentas para quem busca uma vaga e para empresas que querem contratar melhor.</p>
+      </div>
+    </section>
+
+    <section class="bloco">
+      <div class="container">
+        <h2 class="mb-4">Para candidatos</h2>
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-lg-4"><div class="card-info"><div class="icone-circulo"><i class="bi bi-file-earmark-person"></i></div><h3 class="h5">Banco de currículos</h3><p class="mb-0">Deixe seu perfil disponível para as empresas encontrarem você.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-info"><div class="icone-circulo"><i class="bi bi-bell"></i></div><h3 class="h5">Alertas de vagas</h3><p class="mb-0">Receba avisos quando surgirem oportunidades na sua área de interesse.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-info"><div class="icone-circulo"><i class="bi bi-chat-square-text"></i></div><h3 class="h5">Orientação de carreira</h3><p class="mb-0">Dicas para montar o currículo e se preparar para entrevistas.</p></div></div>
+        </div>
+
+        <h2 class="mb-4">Para empresas</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4"><div class="card-info"><div class="icone-circulo"><i class="bi bi-megaphone"></i></div><h3 class="h5">Divulgação de vagas</h3><p class="mb-0">Publique suas vagas e alcance candidatos de diferentes regiões.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-info"><div class="icone-circulo"><i class="bi bi-funnel"></i></div><h3 class="h5">Triagem de candidatos</h3><p class="mb-0">Filtre perfis por área, cidade e tipo de contrato.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-info"><div class="icone-circulo"><i class="bi bi-mortarboard"></i></div><h3 class="h5">Treinamentos</h3><p class="mb-0">Programas de capacitação para equipes e novos contratados.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco bloco-branco">
+      <div class="container" style="max-width: 820px;">
+        <h2 class="text-center mb-4">Perguntas frequentes</h2>
+        <div class="accordion" id="faq">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">O cadastro é gratuito?</button></h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Sim. Criar o perfil e pesquisar vagas não tem nenhum custo para o candidato.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">De onde vêm as vagas?</button></h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">As vagas exibidas na página inicial vêm da Remotive, uma plataforma de oportunidades de trabalho remoto. A candidatura é feita no site da empresa.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Por que preciso informar o CEP?</button></h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Com o CEP, o sistema preenche rua, bairro, cidade e estado para você, o que deixa o cadastro mais rápido.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="marca mb-3">Work<span>ells</span></div>
+          <p class="mb-0">Conectamos pessoas a oportunidades de trabalho. Cadastre seu perfil, busque vagas e acompanhe sua evolução profissional em um só lugar.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5 class="mb-3">Navegação</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="index.html">Home</a></li>
+            <li class="mb-2"><a href="sobre.html">Sobre</a></li>
+            <li class="mb-2"><a href="servicos.html">Serviços</a></li>
+            <li class="mb-2"><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h5 class="mb-3">Fale com a gente</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><i class="bi bi-envelope me-2"></i>contato@workells.com.br</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2"></i>(13) 4000-0000</li>
+            <li><i class="bi bi-geo-alt me-2"></i>São Vicente, SP</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <p class="small text-center mb-0">&copy; 2026 Workells. Vagas fornecidas pela API Remotive. Endereços consultados via ViaCEP.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Workells: encontre vagas de emprego, cadastre seu currículo e dê o próximo passo na carreira.">
+  <title>Cadastro - Workells</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-laranja fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-briefcase-fill me-2"></i>Workells</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link " href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link " href="servicos.html">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link active" href="cadastro.html">Cadastro</a></li>
+            <li class="nav-item"><a class="nav-link " href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="mb-2">Crie seu cadastro</h1>
+        <p>Preencha os dados abaixo para deixar seu perfil disponível para as empresas.</p>
+      </div>
+    </section>
+
+    <section class="bloco">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <form id="formCadastro" class="form-card needs-validation" novalidate>
+              <h2>Dados pessoais</h2>
+              <div class="row g-3 mb-4">
+                <div class="col-12">
+                  <label for="nome" class="form-label">Nome completo *</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required minlength="5" autocomplete="name">
+                  <div class="invalid-feedback">Informe seu nome completo.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mail *</label>
+                  <input type="email" class="form-control" id="email" name="email" required autocomplete="email">
+                  <div class="invalid-feedback">Informe um e-mail válido.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="telefone" class="form-label">Telefone / WhatsApp *</label>
+                  <input type="tel" class="form-control" id="telefone" name="telefone" required pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(00) 00000-0000" autocomplete="tel">
+                  <div class="invalid-feedback">Informe o telefone com DDD.</div>
+                </div>
+              </div>
+
+              <h2>Endereço</h2>
+              <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                  <label for="cep" class="form-label">CEP *</label>
+                  <input type="text" class="form-control" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="00000-000" inputmode="numeric" autocomplete="postal-code">
+                  <div class="invalid-feedback">Informe um CEP válido.</div>
+                  <div id="statusCep" class="status-cep" aria-live="polite"></div>
+                </div>
+                <div class="col-md-8">
+                  <label for="logradouro" class="form-label">Logradouro *</label>
+                  <input type="text" class="form-control" id="logradouro" name="logradouro" required>
+                  <div class="invalid-feedback">Informe o logradouro.</div>
+                </div>
+                <div class="col-md-3">
+                  <label for="numero" class="form-label">Número *</label>
+                  <input type="text" class="form-control" id="numero" name="numero" required>
+                  <div class="invalid-feedback">Informe o número.</div>
+                </div>
+                <div class="col-md-5">
+                  <label for="bairro" class="form-label">Bairro *</label>
+                  <input type="text" class="form-control" id="bairro" name="bairro" required>
+                  <div class="invalid-feedback">Informe o bairro.</div>
+                </div>
+                <div class="col-md-4">
+                  <label for="cidade" class="form-label">Cidade *</label>
+                  <input type="text" class="form-control" id="cidade" name="cidade" required>
+                  <div class="invalid-feedback">Informe a cidade.</div>
+                </div>
+                <div class="col-md-3">
+                  <label for="uf" class="form-label">UF *</label>
+                  <input type="text" class="form-control" id="uf" name="uf" required maxlength="2" pattern="[A-Za-z]{2}">
+                  <div class="invalid-feedback">Informe a UF.</div>
+                </div>
+              </div>
+
+              <h2>Perfil profissional</h2>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="area" class="form-label">Área de interesse *</label>
+                  <select class="form-select" id="area" name="area" required>
+                    <option value="" selected disabled>Selecione</option>
+                    <option>Tecnologia</option>
+                    <option>Design</option>
+                    <option>Marketing</option>
+                    <option>Vendas</option>
+                    <option>Atendimento</option>
+                    <option>Administrativo</option>
+                    <option>Financeiro</option>
+                    <option>Outra</option>
+                  </select>
+                  <div class="invalid-feedback">Selecione uma área.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="contrato" class="form-label">Tipo de contrato *</label>
+                  <select class="form-select" id="contrato" name="contrato" required>
+                    <option value="" selected disabled>Selecione</option>
+                    <option>CLT</option>
+                    <option>PJ</option>
+                    <option>Estágio</option>
+                    <option>Freelancer</option>
+                    <option>Qualquer</option>
+                  </select>
+                  <div class="invalid-feedback">Selecione o tipo de contrato.</div>
+                </div>
+                <div class="col-12">
+                  <label for="resumo" class="form-label">Resumo profissional</label>
+                  <textarea class="form-control" id="resumo" name="resumo" rows="3" maxlength="400" placeholder="Fale rapidamente sobre sua experiência e objetivos"></textarea>
+                </div>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="termos" required>
+                <label class="form-check-label" for="termos">Concordo com o uso dos meus dados para fins de recrutamento. *</label>
+                <div class="invalid-feedback">É necessário aceitar para continuar.</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg px-5">Enviar cadastro</button>
+            </form>
+          </div>
+
+          <aside class="col-lg-4">
+            <div class="card-info mb-4">
+              <div class="icone-circulo"><i class="bi bi-geo-alt"></i></div>
+              <h3 class="h5">Endereço automático</h3>
+              <p class="mb-0">Digite o CEP e o sistema preenche logradouro, bairro, cidade e UF para você.</p>
+            </div>
+            <div class="card-info">
+              <div class="icone-circulo"><i class="bi bi-shield-check"></i></div>
+              <h3 class="h5">Seus dados protegidos</h3>
+              <p class="mb-0">Usamos suas informações apenas para conectar você a oportunidades de trabalho.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  <div class="modal fade" id="modalSucesso" tabindex="-1" aria-labelledby="tituloSucesso" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4">
+        <div class="modal-body text-center p-5">
+          <div class="icone-circulo" style="width:72px;height:72px;font-size:2rem;"><i class="bi bi-check-lg"></i></div>
+          <h2 class="h4" id="tituloSucesso">Tudo certo, <span id="nomeSucesso"></span>!</h2>
+          <p class="mb-4">Seu cadastro foi enviado. Em breve as empresas poderão encontrar o seu perfil.</p>
+          <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="marca mb-3">Work<span>ells</span></div>
+          <p class="mb-0">Conectamos pessoas a oportunidades de trabalho. Cadastre seu perfil, busque vagas e acompanhe sua evolução profissional em um só lugar.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5 class="mb-3">Navegação</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="index.html">Home</a></li>
+            <li class="mb-2"><a href="sobre.html">Sobre</a></li>
+            <li class="mb-2"><a href="servicos.html">Serviços</a></li>
+            <li class="mb-2"><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h5 class="mb-3">Fale com a gente</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><i class="bi bi-envelope me-2"></i>contato@workells.com.br</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2"></i>(13) 4000-0000</li>
+            <li><i class="bi bi-geo-alt me-2"></i>São Vicente, SP</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <p class="small text-center mb-0">&copy; 2026 Workells. Vagas fornecidas pela API Remotive. Endereços consultados via ViaCEP.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
